@@ -1,0 +1,66 @@
+body {
+    margin-top: 0;
+    margin-bottom: 0;
+    background: none;
+}
+
+.full {
+  background: url('/uploads/logo/bg.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.login {
+
+	background-color: #eee;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20%;
+	background-color: ;
+	max-height: 300px;
+	height: 300px;
+	border: 1px solid #888888;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+
+.full-login {
+  
+  background: url('/uploads/logo/bg-login.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+ a, a:hover {
+  text-decoration: none !important;
+}
