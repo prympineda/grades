@@ -416,5 +416,89 @@ Route::group(['middleware' => 'preventBackHistory'], function () {
         });
 
 
+        // route to view written work scores
+        Route::get('view/written-work/score/{sectionid}/{subjectid}/get', [
+            'uses' => 'TeacherUsersController@viewWrittenWorkScore',
+            'as' => 'view_written_work_score'
+        ]);
+
+
+        // route to update individual score of student in written work
+        Route::get('update/written-work/score/{id}/{user_id}', [
+            'uses' => 'TeacherUsersController@updateWrittenWorkScore',
+            'as' => 'update_written_work_score'
+        ]);
+
+        // route to add performance task in record of the students
+        Route::get('add/performance-task/section/{section_id}/subject/{subject_id}/get', [
+            'uses' => 'TeacherUsersController@addPerformanceTask',
+            'as' => 'add_performance_task_score'
+        ]);
+
+
+        // route to post update writen work score
+        Route::post('update/written-work/score', [
+            'uses' => 'TeacherUsersController@postUpdateWrittenWorkScore',
+            'as' => 'post_update_written_work_score'
+        ]);
+
+
+        // route to add performance task
+        Route::post('add/performance-task', [
+            'uses' => 'TeacherUsersController@postAddPerformanceTask',
+            'as' => 'post_add_performance_task'
+        ]);
+
+
+        // route update performance task
+        Route::get('update/performance-task/score/{section_id}/{subject_id}/get', [
+            'uses' => 'TeacherUsersController@updatePerformanceTaskScore',
+            'as' => 'update_performance_task_score'
+        ]);
+
+
+        // route post update performance task
+        Route::post('update/performance-task/score', [
+            'uses' => 'TeacherUsersController@postUpdatePerformanceTaskScore',
+            'as' => 'post_update_performance_task_score'
+        ]);
+
+        // route to view performance task scores
+        Route::get('view/performance-task/score/{section_id}/{subject_id}/get', [
+            'uses' => 'TeacherUsersController@viewPerformanceTask',
+            'as' => 'view_performance_task_score'
+        ]);
+
+
+        // route to add exam in record of the students
+        Route::get('add/exam/section/{section_id}/subject/{subject_id}/get', [
+            'uses' => 'TeacherUsersController@addExam',
+            'as' => 'add_exam_score'
+        ]);
+
+
+        // route to add exam
+        Route::post('add/exam', [
+            'uses' => 'TeacherUsersController@postAddExam',
+            'as' => 'post_add_exam_score'
+        ]);
+
+        // route to view exam scores
+        Route::get('view/exam/score/{sectionid}/{subjectid}/get', [
+            'uses' => 'TeacherUsersController@viewExamScore',
+            'as' => 'view_exam_score'
+        ]);
+
+        // route to edit exam score
+        Route::get('update/exam/score/{id}/{user_id}/', [
+            'uses' => 'TeacherUsersController@updateExamScore',
+            'as' => 'update_exam_score'
+        ]);
+
+        // route to POST edit exam score
+        Route::post('update/exam/score', [
+            'uses' => 'TeacherUsersController@postUpdateExamScore',
+            'as' => 'post_update_exam_score'
+        ]);
     });
 });

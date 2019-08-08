@@ -7,12 +7,12 @@
 <div>
         
         <a href="{{ route('add_written_work_score', ['section_id'=> $section->id, 'subject_id' => $subject->id]) }}" class="btn btn-primary btn-xs">Add Written Work</a>
-        <a href="" class="btn btn-primary btn-xs">Add Performance Task</a>
-        <a href="" class="btn btn-primary btn-xs">Add Exam</a>
+        <a href="{{ route('add_performance_task_score', ['section_id'=> $section->id, 'subject_id' => $subject->id]) }}" class="btn btn-primary btn-xs">Add Performance Task</a>
+        <a href="{{ route('add_exam_score', ['section_id'=> $section->id, 'subject_id' => $subject->id]) }}" class="btn btn-primary btn-xs">Add Exam</a>
         |
-        <a href="" class="btn btn-success btn-xs">View Written Works Scores</a>
-        <a href="" class="btn btn-success btn-xs">View Performance Task Scores</a>
-        <a href="" class="btn btn-success btn-xs">View Exam Scores</a>
+        <a href="{{ route('view_written_work_score', ['section_id'=> $section->id, 'subject_id' => $subject->id]) }}" class="btn btn-success btn-xs">View Written Works Scores</a>
+        <a href="{{ route('view_performance_task_score', ['section_id'=> $section->id, 'subject_id' => $subject->id]) }}" class="btn btn-success btn-xs">View Performance Task Scores</a>
+        <a href="{{ route('view_exam_score', ['section_id'=> $section->id, 'subject_id' => $subject->id]) }}" class="btn btn-success btn-xs">View Exam Scores</a>
         
         <a href="" class="btn btn-success btn-xs">Percentage Scores</a>
 

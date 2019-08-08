@@ -44,7 +44,7 @@
     </div>
 </form>
 
-<script>
+{{--  <script>
     function getMaxValueForRequest() {
           var x = document.getElementsByClassName('score');
           var currentItemAmount = parseInt(document.getElementById("total").value);
@@ -122,6 +122,6 @@
         window.onload = function() {
           sortTable(0);
         };
-</script>
+</script>  --}}
 
 @stop
