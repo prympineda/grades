@@ -14,7 +14,7 @@
         <a href="{{ route('view_performance_task_score', ['section_id'=> $section->id, 'subject_id' => $subject->id]) }}" class="btn btn-success btn-xs">View Performance Task Scores</a>
         <a href="{{ route('view_exam_score', ['section_id'=> $section->id, 'subject_id' => $subject->id]) }}" class="btn btn-success btn-xs">View Exam Scores</a>
         
-        <a href="" class="btn btn-success btn-xs">Percentage Scores</a>
+        <a href="{{ route('teacher_view_percentange_scores', ['section_id'=> $section->id, 'subject_id' => $subject->id]) }}" class="btn btn-success btn-xs">Percentage Scores</a>
 
         <a href="" class="btn btn-success btn-xs">View Grades</a>
       </div>

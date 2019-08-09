@@ -500,5 +500,12 @@ Route::group(['middleware' => 'preventBackHistory'], function () {
             'uses' => 'TeacherUsersController@postUpdateExamScore',
             'as' => 'post_update_exam_score'
         ]);
+
+
+        // route to view raw score percentage
+        Route::get('percentage/{section_id}/{subject_id}/score/view', [
+            'uses' => 'TeacherUsersController@viewPercentageScores',
+            'as' => 'teacher_view_percentange_scores'
+        ]);
     });
 });

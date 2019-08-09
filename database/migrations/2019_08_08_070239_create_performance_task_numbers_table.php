@@ -20,7 +20,7 @@ class CreatePerformanceTaskNumbersTable extends Migration
             $table->integer('section_id');
             $table->integer('subject_id');
             $table->integer('number')->default(0);
-            $table->integer('total'); // highes number of score
+            $table->integer('total');
             $table->timestamps();
         });
     }
