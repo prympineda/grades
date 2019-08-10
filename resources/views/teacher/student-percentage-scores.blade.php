@@ -3,8 +3,8 @@
 
 @section('content')
 
-<h1>Percentage Score</h1>
-
+<h1>Percentage Scores: Students for {{ ucwords($section->grade_level->name) }}-{{ ucwords($section->name) }}  -  {{ ucwords($subject->title) }}</h1> 
+@include('includes.success')
 
 <table class="table table-hover">
     <thead>
