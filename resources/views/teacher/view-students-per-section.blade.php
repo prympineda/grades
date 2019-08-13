@@ -16,7 +16,7 @@
         
         <a href="{{ route('teacher_view_percentange_scores', ['section_id'=> $section->id, 'subject_id' => $subject->id]) }}" class="btn btn-success btn-xs">Percentage Scores</a>
 
-        <a href="" class="btn btn-success btn-xs">View Grades</a>
+        <a href="{{ route('teacher_view_subject_grades', ['section_id'=> $section->id, 'subject_id' => $subject->id]) }}" class="btn btn-success btn-xs">View Grades</a>
       </div>
 
 <table class="table table-striped table-hover">

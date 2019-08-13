@@ -507,5 +507,12 @@ Route::group(['middleware' => 'preventBackHistory'], function () {
             'uses' => 'TeacherUsersController@viewPercentageScores',
             'as' => 'teacher_view_percentange_scores'
         ]);
+
+
+        // route to view grades per subject
+        Route::get('grade/{sectionid}/{subjectid}/view', [
+            'uses' => 'TeacherusersController@viewSubjectGrades',
+            'as' => 'teacher_view_subject_grades'
+        ]);
     });
 });
