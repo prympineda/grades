@@ -1755,7 +1755,7 @@ class TeacherUsersController extends Controller
 					];
 				}
 
-				return view('teacher.student-percentage-scores', ['students' => $students, 'section' => $section, 'pg' => $pg, 'grade7' => $grade7, 'grade8' => $grade8, 'grade9' => $grade9, 'grade10' => $grade10, 'grade11' => $grade11, 'grade12' => $grade12]);
+				return view('teacher.student-percentage-scores', ['students' => $students, 'subject' => $subject, 'section' => $section, 'pg' => $pg, 'grade7' => $grade7, 'grade8' => $grade8, 'grade9' => $grade9, 'grade10' => $grade10, 'grade11' => $grade11, 'grade12' => $grade12]);
 			} // end of third quarter
 
 
@@ -1854,7 +1854,7 @@ class TeacherUsersController extends Controller
 					];
 				}
 
-				return view('teacher.student-percentage-scores', ['students' => $students, 'section' => $section, 'pg' => $pg, 'grade7' => $grade7, 'grade8' => $grade8, 'grade9' => $grade9, 'grade10' => $grade10, 'grade11' => $grade11, 'grade12' => $grade12]);
+				return view('teacher.student-percentage-scores', ['students' => $students, 'subject' => $subject, 'section' => $section, 'pg' => $pg, 'grade7' => $grade7, 'grade8' => $grade8, 'grade9' => $grade9, 'grade10' => $grade10, 'grade11' => $grade11, 'grade12' => $grade12]);
 			} // end of fourth quarter
 
 
@@ -1882,7 +1882,7 @@ class TeacherUsersController extends Controller
 
 
 					$pt_scores_s1[] = [
-						'student_id' => $std->user_id,
+						'student_id' => $std->id,
 						'score' => PerformanceTaskScore::where('semester_id', 1)
 							->where('section_id', $section_id)
 							->where('subject_id', $subject_id)
@@ -1950,7 +1950,7 @@ class TeacherUsersController extends Controller
 						'grade' => number_format($grade)
 					];
 				}
-				return view('teacher.student-percentage-scores', ['students' => $students, 'section' => $section, 'pg' => $pg, 'grade7' => $grade7, 'grade8' => $grade8, 'grade9' => $grade9, 'grade10' => $grade10, 'grade11' => $grade11, 'grade12' => $grade12]);
+				return view('teacher.student-percentage-scores', ['students' => $students, 'subject' => $subject, 'section' => $section, 'pg' => $pg, 'grade7' => $grade7, 'grade8' => $grade8, 'grade9' => $grade9, 'grade10' => $grade10, 'grade11' => $grade11, 'grade12' => $grade12]);
 			} // end of first sem
 
 
@@ -2045,7 +2045,7 @@ class TeacherUsersController extends Controller
 					];
 				}
 
-				return view('teacher.student-percentage-scores', ['students' => $students, 'section' => $section, 'pg' => $pg, 'grade7' => $grade7, 'grade8' => $grade8, 'grade9' => $grade9, 'grade10' => $grade10, 'grade11' => $grade11, 'grade12' => $grade12]);
+				return view('teacher.student-percentage-scores', ['students' => $students, 'subject' => $subject, 'section' => $section, 'pg' => $pg, 'grade7' => $grade7, 'grade8' => $grade8, 'grade9' => $grade9, 'grade10' => $grade10, 'grade11' => $grade11, 'grade12' => $grade12]);
 			} // end of second sem
 
 		}
@@ -2536,7 +2536,7 @@ class TeacherUsersController extends Controller
 
 
 					$pt_scores_s1[] = [
-						'student_id' => $std->user_id,
+						'student_id' => $std->id,
 						'score' => PerformanceTaskScore::where('semester_id', 1)
 							->where('section_id', $section_id)
 							->where('subject_id', $subject_id)

@@ -91,7 +91,7 @@ class AccessController extends Controller
             	 */
                     $user_log = new ActivityLogs();
                     $user_log->user_id = Auth::user()->id;
-                    $user_log->action = 'Teachers Login: ';
+                    $user_log->action = 'Teachers Login';
                     $user_log->save();
 
                     return redirect()->route('teacher_dashboard');;
@@ -115,7 +115,7 @@ class AccessController extends Controller
             	 */
                     $user_log = new ActivityLogs();
                     $user_log->user_id = Auth::user()->id;
-                    $user_log->action = 'Student Login: ';
+                    $user_log->action = 'Student Login';
                     $user_log->save();
 
                     return redirect()->route('get_student_dashboard');;
@@ -137,10 +137,10 @@ class AccessController extends Controller
 			$user_log->action = 'Admin Logout';
 		}
 		elseif(Auth::user()->role_id == 2) {
-			$user_log->action = 'Teacher Logout: ' . Auth::user()->id;
+			$user_log->action = 'Teacher Logout';
 		}
 		else {
-			$user_log->role_id = 'Student Logout: ' . Auth::user()->id;
+			$user_log->action = 'Student Logout';
 		}
         $user_log->save();
         

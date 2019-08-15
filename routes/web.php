@@ -23,7 +23,7 @@ Route::get('/', function () {
         if (Auth::user()->role_id == 2) {
             return redirect()->route('teacher_dashboard');
         } else {
-            return redirect()->route('student_dashboard');
+            return redirect()->route('get_student_dashboard');
         }
     }
     return view('layouts.landing_page');
@@ -514,5 +514,29 @@ Route::group(['middleware' => 'preventBackHistory'], function () {
             'uses' => 'TeacherusersController@viewSubjectGrades',
             'as' => 'teacher_view_subject_grades'
         ]);
+    });
+});
+
+
+
+
+
+
+// ------------------------Student Routes------------------------
+
+Route::group(['middleware' => 'preventBackHistory'], function () {
+    Route::group(['prefix' => 'student', 'middleware' => ['auth', 'Student']], function () { 
+       
+        Route::get('/', [
+            'uses' => 'StudentUsersController@getStudentDashboard',
+            'as' => 'get_student_dashboard'
+        ]);
+
+        Route::get('view-grades/{id}', [
+            'uses' => 'StudentUsersController@getStudentViewGrades',
+            'as' => 'get_student_view_grades'
+        ]);
+
+
     });
 });
